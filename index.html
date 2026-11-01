@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Carnet Maison</title>
+  <meta name="description" content="Le carnet d'entretien de votre logement : pièces, équipements, entretien.">
+  <meta name="theme-color" content="#2f6b4f" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#14161a" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Carnet Maison">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <button id="back" class="back" type="button" aria-label="Retour" hidden>‹</button>
+    <h1 id="title">Carnet Maison</h1>
+  </header>
+
+  <main id="main" tabindex="-1"><p class="empty">Chargement…</p></main>
+
+  <nav class="tabbar" aria-label="Navigation principale">
+    <a href="#/" data-section="accueil"><span aria-hidden="true">🏠</span>Accueil</a>
+    <a href="#/pieces" data-section="pieces"><span aria-hidden="true">🚪</span>Pièces</a>
+    <a href="#/equipements" data-section="equipements"><span aria-hidden="true">🔧</span>Équipements</a>
+    <a href="#/entretien" data-section="entretien"><span aria-hidden="true">📅</span>Entretien</a>
+  </nav>
+
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+  <div id="viewer" class="viewer" hidden><img alt="Photo agrandie"></div>
+
+  <noscript><p class="empty">Carnet Maison nécessite JavaScript.</p></noscript>
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
