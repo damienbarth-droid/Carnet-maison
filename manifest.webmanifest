@@ -1,19 +1,25 @@
 {
   "name": "Carnet Maison",
   "short_name": "Carnet Maison",
-  "description": "Le carnet d'entretien de votre logement : pièces, équipements, entretien.",
+  "description": "Le carnet d'entretien de votre logement : pièces, équipements, entretien, garanties et artisans.",
   "lang": "fr",
+  "dir": "ltr",
   "id": "./",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
-  "orientation": "portrait",
-  "background_color": "#f5f3ee",
-  "theme_color": "#2f6b4f",
+  "orientation": "any",
+  "background_color": "#F5F3EF",
+  "theme_color": "#F5F3EF",
+  "categories": ["lifestyle", "productivity", "utilities"],
   "icons": [
     { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
     { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
     { "src": "icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" },
-    { "src": "icons/icon.svg", "sizes": "any", "type": "image/svg+xml" }
+    { "src": "icons/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ],
+  "shortcuts": [
+    { "name": "Entretien", "short_name": "Entretien", "url": "./#/entretien", "icons": [{ "src": "icons/icon-192.png", "sizes": "192x192" }] },
+    { "name": "Ajouter un équipement", "short_name": "Équipement", "url": "./#/equipements/nouveau", "icons": [{ "src": "icons/icon-192.png", "sizes": "192x192" }] }
   ]
 }

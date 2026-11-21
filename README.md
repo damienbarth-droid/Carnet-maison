@@ -1,38 +1,21 @@
 # Carnet Maison
 
-Application web installable (PWA), en français, pour tenir le carnet d'entretien d'un logement :
-pièces, équipements (avec photos et garanties) et tâches d'entretien récurrentes.
+Application web installable (PWA), en français : le carnet d'entretien de votre logement.
+Pièces, équipements (photos, garanties, documents), entretien récurrent, interventions, artisans.
 
-- HTML / CSS / JavaScript sans framework, fonctionne hors ligne (service worker).
-- Données stockées **uniquement sur l'appareil** (IndexedDB, stockage persistant demandé).
-- Sauvegarde / restauration par fichier JSON (photos incluses en base64).
-- Mode sombre automatique.
+**Ouvrir l'application :** https://damienbarth-droid.github.io/Carnet-maison/
+(puis « Sur l'écran d'accueil » sur iPhone, ou « Installer l'application » sur Android).
 
-Aucune donnée personnelle n'est contenue dans ce dépôt.
+- Fonctionne hors ligne. Les données restent sur l'appareil (aucune donnée personnelle dans ce dépôt).
+- Sauvegarde / restauration par fichier.
+- HTML, CSS et JavaScript sans framework ni étape de build.
 
-## Structure
-
-| Fichier | Rôle |
-|---|---|
-| `index.html` | Coquille de l'application |
-| `css/styles.css` | Styles (clair / sombre) |
-| `js/db.js` | Accès IndexedDB |
-| `js/app.js` | Routeur, écrans, export/import, photos |
-| `sw.js` | Service worker (cache hors ligne) |
-| `manifest.webmanifest`, `icons/` | Installation sur l'écran d'accueil |
-
-## Modèle de données
-
-Magasins IndexedDB : `logements`, `pieces`, `equipements`, `taches`, `photos`, `meta`.
-Chaque élément porte un `logementId` (un seul logement « Maison » en V0.1).
-
-## Publier une nouvelle version
-
-Après modification d'un fichier, incrémenter `VERSION` dans `sw.js` pour forcer la mise à jour du cache.
-
-## Test en local
-
+## Développement
 ```sh
-python3 -m http.server 8000
-# puis ouvrir http://localhost:8000
+npm run serve      # http://localhost:8765
+npm test           # tests unitaires + vérification du cache hors ligne
+npm run test:e2e   # parcours complet dans Chromium (Playwright)
 ```
+Documentation interne : `CLAUDE.md` (architecture, conventions) et `ROADMAP.md` (versions, suite).
+
+Crédits : icônes [Phosphor](https://phosphoricons.com) (MIT), polices Bricolage Grotesque et Figtree (SIL OFL).

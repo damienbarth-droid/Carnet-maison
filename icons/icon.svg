@@ -1,6 +1,19 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-  <rect width="512" height="512" rx="112" fill="#2f6b4f"/>
-  <path d="M256 104 92 240h44v168h240V240h44z" fill="#f5f3ee"/>
-  <rect x="220" y="300" width="72" height="108" rx="8" fill="#2f6b4f"/>
-  <path d="M176 250h56M176 278h40" stroke="#2f6b4f" stroke-width="16" stroke-linecap="round"/>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2C8F75"/><stop offset="1" stop-color="#134A3D"/>
+    </linearGradient>
+    <linearGradient id="hs" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#EDE8DF"/>
+    </linearGradient>
+    <clipPath id="c"><rect width="512" height="512" rx="116"/></clipPath>
+  </defs>
+  <rect width="512" height="512" rx="116" fill="url(#bg)"/>
+  <circle cx="400" cy="96" r="150" fill="#FFFFFF" opacity=".07" clip-path="url(#c)"/>
+  <g transform="translate(96 92) scale(1.25)">
+    <path d="M224,120v96a8,8,0,0,1-8,8H40a8,8,0,0,1-8-8V120a15.87,15.87,0,0,1,4.69-11.32l80-80a16,16,0,0,1,22.62,0l80,80A15.87,15.87,0,0,1,224,120Z" fill="url(#hs)"/>
+    <rect x="100" y="148" width="56" height="76" rx="10" fill="#1B6553"/>
+  </g>
+  <circle cx="372" cy="364" r="62" fill="#F4B34A" stroke="#134A3D" stroke-width="14"/>
+  <path d="M343 365l20 20 38-40" fill="none" stroke="#134A3D" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
