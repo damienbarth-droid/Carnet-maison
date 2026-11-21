@@ -1,0 +1,12 @@
+{
+  "name": "carnet-maison",
+  "version": "0.4.0",
+  "private": true,
+  "description": "PWA hors ligne : carnet d'entretien du logement",
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/unit.test.mjs && node tests/check-sw.mjs",
+    "test:e2e": "node tests/e2e.mjs",
+    "serve": "python3 -m http.server 8765"
+  }
+}
